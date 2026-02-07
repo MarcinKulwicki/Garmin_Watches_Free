@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fonts>
+    <!-- Orbitron -->
+    <font id="OrbitronRegular" filename="Orbitron/Orbitron-102.fnt" />
+    <font id="OrbitronSmall" filename="Orbitron/Orbitron-52.fnt" />
+    <font id="Orbitron40" filename="Orbitron/Orbitron-40.fnt" />
+</fonts>
