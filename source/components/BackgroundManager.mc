@@ -11,16 +11,11 @@ module BackgroundManager {
     var cachedBitmapId = -1;
     
     function drawBackground(dc as Dc) as Void {
-        var bgType = SettingsHelper.getNumberProperty("BackgroundType", 1);
+        // Pobieramy tło z aktualnego motywu milestone
+        var theme = SobrietyTracker.getCurrentTheme();
+        var bgId = theme[:backgroundId];
         
-        if (bgType >= 1 && bgType <= BG_TYPE_IMAGE_MAX) {
-            drawBitmapBackground(dc, bgType);
-        } else if (bgType == BG_TYPE_SOLID) {
-            drawSolidBackground(dc);
-        } else {
-            dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
-            dc.clear();
-        }
+        drawBitmapBackground(dc, bgId);
     }
     
     function drawBitmapBackground(dc as Dc, bgId as Number) as Void {
@@ -47,16 +42,6 @@ module BackgroundManager {
             case 4: return Application.loadResource(Rez.Drawables.Background4);
             default: return Application.loadResource(Rez.Drawables.Background1);
         }
-    }
-    
-    function drawSolidBackground(dc as Dc) as Void {
-        var color = ColorHelper.getColorFromProperty(
-            "BackgroundSolidColor", 
-            "BackgroundSolidColorCustom", 
-            Graphics.COLOR_BLACK
-        );
-        dc.setColor(color, color);
-        dc.clear();
     }
     
     function clearCache() as Void {

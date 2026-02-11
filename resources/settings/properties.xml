@@ -1,9 +1,32 @@
 <properties xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
 
+    <!-- ===== EXISTING PROPERTIES ===== -->
     <property id="BackgroundType" type="number">1</property>
-
     <property id="BackgroundColor" type="number">0x000000</property>
     <property id="ForegroundColor" type="number">0xFF0000</property>
     <property id="UseMilitaryFormat" type="boolean">false</property>
+
+    <!-- ===== SOBRIETY START DATE/TIME ===== -->
+    <property id="SobrietyYear" type="number">2025</property>
+    <property id="SobrietyMonth" type="number">2</property>
+    <property id="SobrietyDay" type="number">8</property>
+    <property id="SobrietyHour" type="number">11</property>
+    <property id="SobrietyMinute" type="number">50</property>
+
+    <!-- ===== FIELD DATA CONFIGURATION ===== -->
+    <property id="UpperFieldData" type="number">2</property> <!-- Date -->
+    <property id="MiddleFieldData" type="number">1</property> <!-- Time -->
+    <property id="LowerFieldData" type="number">5</property> <!-- Steps -->
+    <property id="LeftFieldData" type="number">12</property> <!-- Sobriety Days -->
+    <property id="RightFieldData" type="number">4</property> <!-- Temperature -->
+
+    <!-- ===== MILESTONE THEMES (użytkownik wybiera Theme_1 do Theme_10) ===== -->
+    <property id="Milestone0Theme" type="number">1</property> <!-- Day Zero - always black/white -->
+    <property id="Milestone1Theme" type="number">1</property> <!-- 1-6 days -->
+    <property id="Milestone2Theme" type="number">2</property> <!-- 7-29 days -->
+    <property id="Milestone3Theme" type="number">3</property> <!-- 30-89 days -->
+    <property id="Milestone4Theme" type="number">4</property> <!-- 90-179 days -->
+    <property id="Milestone5Theme" type="number">5</property> <!-- 180-364 days -->
+    <property id="Milestone6Theme" type="number">6</property> <!-- 365+ days -->
 
 </properties>

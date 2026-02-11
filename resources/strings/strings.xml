@@ -19,4 +19,9 @@
     <string id="ColorBlue">Blue</string>
     <string id="ColorRed">Red</string>
 
+    <!-- Data type strings -->
+    <string id="DataNone">None</string>
+    <string id="DataTemperature">Temperature</string>
+    <string id="DataNotifications">Notifications</string>
+
 </strings>

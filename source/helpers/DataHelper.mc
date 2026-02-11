@@ -20,7 +20,8 @@ module DataHelper {
         DATA_FLOORS = 8,
         DATA_ALTITUDE = 9,
         DATA_NOTIFICATIONS = 10,
-        DATA_SECONDS = 11
+        DATA_SECONDS = 11,
+        DATA_SOBRIETY_DAYS = 12  // NOWY TYP
     }
 
     function getDataString(dataType as Number) as String {
@@ -36,6 +37,7 @@ module DataHelper {
             case DATA_ALTITUDE: return getAltitudeString();
             case DATA_NOTIFICATIONS: return getNotificationsString();
             case DATA_SECONDS: return getSecondsString();
+            case DATA_SOBRIETY_DAYS: return getSobrietyDaysString();
             default: return "";
         }
     }
@@ -183,5 +185,11 @@ module DataHelper {
 
     function getSecondsString() as String {
         return System.getClockTime().sec.format("%02d");
+    }
+
+    // NOWA FUNKCJA - zwraca dni trzeźwości jako string
+    function getSobrietyDaysString() as String {
+        var days = SobrietyTracker.getDaysSober();
+        return days.toString();
     }
 }

@@ -38,19 +38,30 @@ class NukePip_FreeView extends WatchUi.WatchFace {
             return;
         }
 
+        // Rysujemy tło z aktualnego motywu milestone
         BackgroundManager.drawBackground(dc);
+        
+        // Rysujemy sekundnik z kolorami baterii z motywu
         SecondsIndicator.draw(dc);
         
         var centerX = dc.getWidth() / 2;
         
+        // GÓRNY - Data
         FieldRenderer.drawField(dc, "Upper", centerX, dc.getHeight() / 7, 
                                 font40, Graphics.TEXT_JUSTIFY_CENTER);
+        
+        // ŚRODEK - Czas
         FieldRenderer.drawField(dc, "Middle", centerX, dc.getHeight() * 4 / 10, 
                                 fontRegular, Graphics.TEXT_JUSTIFY_CENTER);
+        
+        // DÓŁ - Kroki
         FieldRenderer.drawField(dc, "Lower", centerX, dc.getHeight() * 13 / 16, 
                                 fontSmall, Graphics.TEXT_JUSTIFY_CENTER);
         
+        // LEWA STRONA - Dni trzeźwości
         FieldRenderer.drawSideField(dc, "Left", dc.getHeight() * 6 / 10, true, fontSmall);
+        
+        // PRAWA STRONA - Temperatura lub Powiadomienia (wybór użytkownika)
         FieldRenderer.drawSideField(dc, "Right", dc.getHeight() * 6 / 10, false, fontSmall);
     }
 

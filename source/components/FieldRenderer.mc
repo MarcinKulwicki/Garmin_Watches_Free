@@ -7,11 +7,9 @@ module FieldRenderer {
         var dataType = SettingsHelper.getNumberProperty(fieldName + "FieldData", DataHelper.DATA_NONE);
         if (dataType == DataHelper.DATA_NONE) { return; }
         
-        var color = ColorHelper.getColorFromProperty(
-            fieldName + "FieldColor", 
-            fieldName + "FieldColorCustom", 
-            ColorHelper.COLOR_DEFAULT
-        );
+        var theme = SobrietyTracker.getCurrentTheme();
+        var color = theme[:foregroundColor];
+        
         var text = DataHelper.getDataString(dataType);
         
         if (fieldName.equals("Middle")) {
@@ -31,11 +29,16 @@ module FieldRenderer {
         var dataType = SettingsHelper.getNumberProperty(fieldName + "FieldData", DataHelper.DATA_NONE);
         if (dataType == DataHelper.DATA_NONE) { return; }
         
-        var color = ColorHelper.getColorFromProperty(
-            fieldName + "FieldColor", 
-            fieldName + "FieldColorCustom", 
-            ColorHelper.COLOR_DEFAULT
-        );
+        var theme = SobrietyTracker.getCurrentTheme();
+        
+        // Jeśli to pole trzeźwości (Left), używamy osobnego koloru
+        var color;
+        if (isLeft && dataType == DataHelper.DATA_SOBRIETY_DAYS) {
+            color = theme[:sobrietyColor];
+        } else {
+            color = theme[:foregroundColor];
+        }
+        
         var text = DataHelper.getDataString(dataType);
         var textLen = text.length();
         

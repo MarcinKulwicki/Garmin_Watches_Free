@@ -1,24 +1,127 @@
 <settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
 
-    <setting propertyKey="@Properties.ForegroundColor" title="@Strings.ForegroundColorTitle">
+    <!-- ===== SOBRIETY START DATE/TIME ===== -->
+    <setting propertyKey="@Properties.SobrietyYear" title="▶ Sobriety Start Year">
+        <settingConfig type="numeric" min="2020" max="2030" />
+    </setting>
+
+    <setting propertyKey="@Properties.SobrietyMonth" title="▶ Sobriety Start Month">
+        <settingConfig type="numeric" min="1" max="12" />
+    </setting>
+
+    <setting propertyKey="@Properties.SobrietyDay" title="▶ Sobriety Start Day">
+        <settingConfig type="numeric" min="1" max="31" />
+    </setting>
+
+    <setting propertyKey="@Properties.SobrietyHour" title="▶ Sobriety Start Hour">
+        <settingConfig type="numeric" min="0" max="23" />
+    </setting>
+
+    <setting propertyKey="@Properties.SobrietyMinute" title="▶ Sobriety Start Minute">
+        <settingConfig type="numeric" min="0" max="59" />
+    </setting>
+
+    <!-- ===== RIGHT FIELD CONFIGURATION ===== -->
+    <setting propertyKey="@Properties.RightFieldData" title="▶ Right Field Display">
         <settingConfig type="list">
-            <listEntry value="0x000000">@Strings.ColorBlack</listEntry>
-            <listEntry value="0x0000FF">@Strings.ColorBlue</listEntry>
-            <listEntry value="0xFF0000">@Strings.ColorRed</listEntry>
-            <listEntry value="0xFFFFFF">@Strings.ColorWhite</listEntry>
+            <listEntry value="4">Temperature</listEntry>
+            <listEntry value="10">Notifications</listEntry>
         </settingConfig>
     </setting>
 
-    <setting propertyKey="@Properties.BackgroundType" title="@Strings.BackgroundTypeTitle">
+    <!-- ===== MILESTONE THEMES ===== -->
+    <setting propertyKey="@Properties.Milestone1Theme" title="▶ Milestone 1 (1-6 days)">
         <settingConfig type="list">
-            <listEntry value="1">@Strings.BackgroundImage1</listEntry>
-            <listEntry value="2">@Strings.BackgroundImage2</listEntry>
-            <listEntry value="3">@Strings.BackgroundImage3</listEntry>
-            <listEntry value="4">@Strings.BackgroundImage4</listEntry>
+            <listEntry value="1">Theme 1 - Blue</listEntry>
+            <listEntry value="2">Theme 2 - Lime Green</listEntry>
+            <listEntry value="3">Theme 3 - Yellow</listEntry>
+            <listEntry value="4">Theme 4 - Orange</listEntry>
+            <listEntry value="5">Theme 5 - Purple</listEntry>
+            <listEntry value="6">Theme 6 - Gold</listEntry>
+            <listEntry value="7">Theme 7 - Red</listEntry>
+            <listEntry value="8">Theme 8 - Magenta</listEntry>
+            <listEntry value="9">Theme 9 - Cyan</listEntry>
+            <listEntry value="10">Theme 10 - Black/White</listEntry>
         </settingConfig>
     </setting>
 
-    <setting propertyKey="@Properties.UseMilitaryFormat" title="@Strings.MilitaryFormatTitle">
+    <setting propertyKey="@Properties.Milestone2Theme" title="▶ Milestone 2 (7-29 days)">
+        <settingConfig type="list">
+            <listEntry value="1">Theme 1 - Blue</listEntry>
+            <listEntry value="2">Theme 2 - Lime Green</listEntry>
+            <listEntry value="3">Theme 3 - Yellow</listEntry>
+            <listEntry value="4">Theme 4 - Orange</listEntry>
+            <listEntry value="5">Theme 5 - Purple</listEntry>
+            <listEntry value="6">Theme 6 - Gold</listEntry>
+            <listEntry value="7">Theme 7 - Red</listEntry>
+            <listEntry value="8">Theme 8 - Magenta</listEntry>
+            <listEntry value="9">Theme 9 - Cyan</listEntry>
+            <listEntry value="10">Theme 10 - Black/White</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.Milestone3Theme" title="▶ Milestone 3 (30-89 days)">
+        <settingConfig type="list">
+            <listEntry value="1">Theme 1 - Blue</listEntry>
+            <listEntry value="2">Theme 2 - Lime Green</listEntry>
+            <listEntry value="3">Theme 3 - Yellow</listEntry>
+            <listEntry value="4">Theme 4 - Orange</listEntry>
+            <listEntry value="5">Theme 5 - Purple</listEntry>
+            <listEntry value="6">Theme 6 - Gold</listEntry>
+            <listEntry value="7">Theme 7 - Red</listEntry>
+            <listEntry value="8">Theme 8 - Magenta</listEntry>
+            <listEntry value="9">Theme 9 - Cyan</listEntry>
+            <listEntry value="10">Theme 10 - Black/White</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.Milestone4Theme" title="▶ Milestone 4 (90-179 days)">
+        <settingConfig type="list">
+            <listEntry value="1">Theme 1 - Blue</listEntry>
+            <listEntry value="2">Theme 2 - Lime Green</listEntry>
+            <listEntry value="3">Theme 3 - Yellow</listEntry>
+            <listEntry value="4">Theme 4 - Orange</listEntry>
+            <listEntry value="5">Theme 5 - Purple</listEntry>
+            <listEntry value="6">Theme 6 - Gold</listEntry>
+            <listEntry value="7">Theme 7 - Red</listEntry>
+            <listEntry value="8">Theme 8 - Magenta</listEntry>
+            <listEntry value="9">Theme 9 - Cyan</listEntry>
+            <listEntry value="10">Theme 10 - Black/White</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.Milestone5Theme" title="▶ Milestone 5 (180-364 days)">
+        <settingConfig type="list">
+            <listEntry value="1">Theme 1 - Blue</listEntry>
+            <listEntry value="2">Theme 2 - Lime Green</listEntry>
+            <listEntry value="3">Theme 3 - Yellow</listEntry>
+            <listEntry value="4">Theme 4 - Orange</listEntry>
+            <listEntry value="5">Theme 5 - Purple</listEntry>
+            <listEntry value="6">Theme 6 - Gold</listEntry>
+            <listEntry value="7">Theme 7 - Red</listEntry>
+            <listEntry value="8">Theme 8 - Magenta</listEntry>
+            <listEntry value="9">Theme 9 - Cyan</listEntry>
+            <listEntry value="10">Theme 10 - Black/White</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.Milestone6Theme" title="▶ Milestone 6 (365+ days)">
+        <settingConfig type="list">
+            <listEntry value="1">Theme 1 - Blue</listEntry>
+            <listEntry value="2">Theme 2 - Lime Green</listEntry>
+            <listEntry value="3">Theme 3 - Yellow</listEntry>
+            <listEntry value="4">Theme 4 - Orange</listEntry>
+            <listEntry value="5">Theme 5 - Purple</listEntry>
+            <listEntry value="6">Theme 6 - Gold</listEntry>
+            <listEntry value="7">Theme 7 - Red</listEntry>
+            <listEntry value="8">Theme 8 - Magenta</listEntry>
+            <listEntry value="9">Theme 9 - Cyan</listEntry>
+            <listEntry value="10">Theme 10 - Black/White</listEntry>
+        </settingConfig>
+    </setting>
+
+    <!-- ===== EXISTING SETTINGS ===== -->
+    <setting propertyKey="@Properties.UseMilitaryFormat" title="Military Format for 24 Hour Time">
         <settingConfig type="boolean" />
     </setting>
 
