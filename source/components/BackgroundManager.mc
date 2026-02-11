@@ -15,6 +15,13 @@ module BackgroundManager {
         var theme = SobrietyTracker.getCurrentTheme();
         var bgId = theme[:backgroundId];
         
+        // bgId == 0 oznacza czysty czarny kolor (Day Zero)
+        if (bgId == 0) {
+            dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
+            dc.clear();
+            return; // WAŻNE - nie wykonuj drawBitmapBackground!
+        }
+        
         drawBitmapBackground(dc, bgId);
     }
     

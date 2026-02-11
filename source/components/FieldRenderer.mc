@@ -45,7 +45,7 @@ module FieldRenderer {
         var x;
         var justification;
         
-        if (textLen <= 3) {
+        if (textLen <= 2) {
             x = isLeft ? dc.getWidth() / 5 : dc.getWidth() * 4 / 5;
             justification = Graphics.TEXT_JUSTIFY_CENTER;
         } else {

@@ -17,12 +17,12 @@ module SobrietyTracker {
     // Predefiniowane motywy - użytkownik wybiera tylko ID (1-20)
     const THEMES = {
         // Podstawowe motywy (1-10)
-        1 => { :bg => 1, :sobrietyColor => 66, :textColor => 1, :battFull => 40, :battMid => 30, :battLow => 11 },  // Blue accent
+        1 => { :bg => 1, :sobrietyColor => 30, :textColor => 1, :battFull => 40, :battMid => 30, :battLow => 11 },  // Gold accent (zmienione z Blue)
         2 => { :bg => 2, :sobrietyColor => 43, :textColor => 1, :battFull => 40, :battMid => 30, :battLow => 11 },  // Lime Green accent
         3 => { :bg => 3, :sobrietyColor => 29, :textColor => 1, :battFull => 40, :battMid => 30, :battLow => 11 },  // Yellow accent
         4 => { :bg => 4, :sobrietyColor => 25, :textColor => 1, :battFull => 40, :battMid => 30, :battLow => 11 },  // Orange accent
         5 => { :bg => 1, :sobrietyColor => 82, :textColor => 1, :battFull => 40, :battMid => 30, :battLow => 11 },  // Purple accent
-        6 => { :bg => 2, :sobrietyColor => 30, :textColor => 1, :battFull => 40, :battMid => 30, :battLow => 11 },  // Gold accent
+        6 => { :bg => 2, :sobrietyColor => 66, :textColor => 1, :battFull => 40, :battMid => 30, :battLow => 11 },  // Blue accent (przeniesione tutaj)
         7 => { :bg => 3, :sobrietyColor => 11, :textColor => 1, :battFull => 40, :battMid => 30, :battLow => 11 },  // Red accent
         8 => { :bg => 4, :sobrietyColor => 93, :textColor => 1, :battFull => 40, :battMid => 30, :battLow => 11 },  // Magenta accent
         9 => { :bg => 1, :sobrietyColor => 56, :textColor => 1, :battFull => 40, :battMid => 30, :battLow => 11 },  // Cyan accent
@@ -73,7 +73,7 @@ module SobrietyTracker {
         // Milestone 0 (Day Zero) - zawsze czarny/biały, ale respektujemy wybór użytkownika dla motywu
         if (milestone == 0) {
             return {
-                :backgroundId => 1,
+                :backgroundId => 0,
                 :foregroundColor => 0xFFFFFF,
                 :sobrietyColor => 0xFFFFFF,
                 :batteryFullColor => 0x008000,
