@@ -17,7 +17,7 @@ module SobrietyTracker {
     // Predefiniowane motywy - użytkownik wybiera tylko ID (1-20)
     const THEMES = {
         // Podstawowe motywy (1-10)
-        1 => { :bg => 1, :sobrietyColor => 30, :textColor => 1, :battFull => 40, :battMid => 30, :battLow => 11 },
+        1 => { :bg => 1, :sobrietyColor => 10, :textColor => 2, :battFull => 10, :battMid => 9, :battLow => 7 }, // Black
         2 => { :bg => 2, :sobrietyColor => 43, :textColor => 1, :battFull => 40, :battMid => 30, :battLow => 11 },
         3 => { :bg => 3, :sobrietyColor => 29, :textColor => 1, :battFull => 40, :battMid => 30, :battLow => 11 },
         4 => { :bg => 4, :sobrietyColor => 25, :textColor => 1, :battFull => 40, :battMid => 30, :battLow => 11 },
@@ -25,7 +25,7 @@ module SobrietyTracker {
         6 => { :bg => 6, :sobrietyColor => 66, :textColor => 1, :battFull => 40, :battMid => 30, :battLow => 11 },
         7 => { :bg => 7, :sobrietyColor => 11, :textColor => 1, :battFull => 40, :battMid => 30, :battLow => 11 },
         8 => { :bg => 8, :sobrietyColor => 93, :textColor => 1, :battFull => 40, :battMid => 30, :battLow => 11 },
-        9 => { :bg => 1, :sobrietyColor => 56, :textColor => 1, :battFull => 40, :battMid => 30, :battLow => 11 },
+        9 => { :bg => 1, :sobrietyColor => 24, :textColor => 64, :battFull => 64, :battMid => 31, :battLow => 24 }, // Black green red
         10 => { :bg => 2, :sobrietyColor => 1, :textColor => 2, :battFull => 66, :battMid => 82, :battLow => 11 },
         
         // Dodatkowe motywy (11-20)
@@ -35,7 +35,7 @@ module SobrietyTracker {
         14 => { :bg => 6, :sobrietyColor => 36, :textColor => 1, :battFull => 29, :battMid => 25, :battLow => 11 },
         15 => { :bg => 7, :sobrietyColor => 58, :textColor => 1, :battFull => 56, :battMid => 66, :battLow => 82 },
         16 => { :bg => 8, :sobrietyColor => 85, :textColor => 1, :battFull => 82, :battMid => 93, :battLow => 94 },
-        17 => { :bg => 1, :sobrietyColor => 48, :textColor => 2, :battFull => 40, :battMid => 29, :battLow => 11 },
+        17 => { :bg => 1, :sobrietyColor => 83, :textColor => 88, :battFull => 87, :battMid => 88, :battLow => 2 }, // Black and pink
         18 => { :bg => 2, :sobrietyColor => 104, :textColor => 1, :battFull => 101, :battMid => 25, :battLow => 11 },
         19 => { :bg => 5, :sobrietyColor => 75, :textColor => 2, :battFull => 66, :battMid => 56, :battLow => 82 },
         20 => { :bg => 8, :sobrietyColor => 98, :textColor => 1, :battFull => 93, :battMid => 94, :battLow => 11 }
