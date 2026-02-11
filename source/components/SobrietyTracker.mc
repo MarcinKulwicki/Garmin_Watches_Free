@@ -13,32 +13,68 @@ module SobrietyTracker {
         { :id => 5, :minDays => 180, :maxDays => 364, :name => "First Year" },
         { :id => 6, :minDays => 365, :maxDays => 99999, :name => "Beyond Year" }
     ];
-
+    
     // Predefiniowane motywy - użytkownik wybiera tylko ID (1-20)
     const THEMES = {
-        // Podstawowe motywy (1-10)
-        1 => { :bg => 1, :sobrietyColor => 10, :textColor => 2, :battFull => 10, :battMid => 9, :battLow => 7 }, // Black
-        2 => { :bg => 2, :sobrietyColor => 43, :textColor => 1, :battFull => 40, :battMid => 30, :battLow => 11 },
-        3 => { :bg => 3, :sobrietyColor => 29, :textColor => 1, :battFull => 40, :battMid => 30, :battLow => 11 },
-        4 => { :bg => 4, :sobrietyColor => 25, :textColor => 1, :battFull => 40, :battMid => 30, :battLow => 11 },
-        5 => { :bg => 5, :sobrietyColor => 82, :textColor => 1, :battFull => 40, :battMid => 30, :battLow => 11 },
-        6 => { :bg => 6, :sobrietyColor => 66, :textColor => 1, :battFull => 40, :battMid => 30, :battLow => 11 },
-        7 => { :bg => 7, :sobrietyColor => 11, :textColor => 1, :battFull => 40, :battMid => 30, :battLow => 11 },
-        8 => { :bg => 8, :sobrietyColor => 93, :textColor => 1, :battFull => 40, :battMid => 30, :battLow => 11 },
-        9 => { :bg => 1, :sobrietyColor => 24, :textColor => 64, :battFull => 64, :battMid => 31, :battLow => 24 }, // Black green red
-        10 => { :bg => 2, :sobrietyColor => 1, :textColor => 2, :battFull => 66, :battMid => 82, :battLow => 11 },
+        // 1. Black (tło: black)
+        1 => { :bg => 1, :sobrietyColor => 10, :textColor => 2, :battFull => 10, :battMid => 9, :battLow => 7 },
         
-        // Dodatkowe motywy (11-20)
-        11 => { :bg => 3, :sobrietyColor => 71, :textColor => 1, :battFull => 66, :battMid => 56, :battLow => 82 },
-        12 => { :bg => 4, :sobrietyColor => 54, :textColor => 1, :battFull => 40, :battMid => 43, :battLow => 29 },
-        13 => { :bg => 5, :sobrietyColor => 94, :textColor => 1, :battFull => 93, :battMid => 82, :battLow => 11 },
-        14 => { :bg => 6, :sobrietyColor => 36, :textColor => 1, :battFull => 29, :battMid => 25, :battLow => 11 },
-        15 => { :bg => 7, :sobrietyColor => 58, :textColor => 1, :battFull => 56, :battMid => 66, :battLow => 82 },
-        16 => { :bg => 8, :sobrietyColor => 85, :textColor => 1, :battFull => 82, :battMid => 93, :battLow => 94 },
-        17 => { :bg => 1, :sobrietyColor => 83, :textColor => 88, :battFull => 87, :battMid => 88, :battLow => 2 }, // Black and pink
-        18 => { :bg => 2, :sobrietyColor => 104, :textColor => 1, :battFull => 101, :battMid => 25, :battLow => 11 },
-        19 => { :bg => 5, :sobrietyColor => 75, :textColor => 2, :battFull => 66, :battMid => 56, :battLow => 82 },
-        20 => { :bg => 8, :sobrietyColor => 98, :textColor => 1, :battFull => 93, :battMid => 94, :battLow => 11 }
+        // 2. Blue Ocean (tło: blue)
+        2 => { :bg => 2, :sobrietyColor => 56, :textColor => 2, :battFull => 71, :battMid => 25, :battLow => 11 },
+        
+        // 3. Green Forest (tło: green)
+        3 => { :bg => 3, :sobrietyColor => 47, :textColor => 2, :battFull => 43, :battMid => 25, :battLow => 11 },
+        
+        // 4. Pink Sunset (tło: pink)
+        4 => { :bg => 4, :sobrietyColor => 94, :textColor => 1, :battFull => 88, :battMid => 25, :battLow => 11 },
+        
+        // 5. Clean Minimal (tło: clean)
+        5 => { :bg => 5, :sobrietyColor => 71, :textColor => 2, :battFull => 66, :battMid => 25, :battLow => 11 },
+        
+        // 6. Gold Elegance (tło: gold)
+        6 => { :bg => 6, :sobrietyColor => 29, :textColor => 1, :battFull => 30, :battMid => 25, :battLow => 11 },
+        
+        // 7. Super Green (tło: supergreen)
+        7 => { :bg => 7, :sobrietyColor => 39, :textColor => 2, :battFull => 40, :battMid => 25, :battLow => 11 },
+        
+        // 8. Pure White (tło: white)
+        8 => { :bg => 8, :sobrietyColor => 82, :textColor => 2, :battFull => 71, :battMid => 25, :battLow => 11 },
+        
+        // 9. Green Red Black (tło: black)
+        9 => { :bg => 1, :sobrietyColor => 24, :textColor => 64, :battFull => 64, :battMid => 31, :battLow => 24 },
+        
+        // 10. Blue Contrast (tło: blue)
+        10 => { :bg => 2, :sobrietyColor => 29, :textColor => 1, :battFull => 56, :battMid => 25, :battLow => 11 },
+        
+        // 11. Royal Blue (tło: green)
+        11 => { :bg => 3, :sobrietyColor => 71, :textColor => 1, :battFull => 66, :battMid => 25, :battLow => 11 },
+        
+        // 12. Sea Green (tło: pink)
+        12 => { :bg => 4, :sobrietyColor => 54, :textColor => 1, :battFull => 47, :battMid => 25, :battLow => 11 },
+        
+        // 13. Deep Pink (tło: clean)
+        13 => { :bg => 5, :sobrietyColor => 94, :textColor => 2, :battFull => 88, :battMid => 25, :battLow => 11 },
+        
+        // 14. Banana Yellow (tło: gold)
+        14 => { :bg => 6, :sobrietyColor => 35, :textColor => 1, :battFull => 29, :battMid => 25, :battLow => 11 },
+        
+        // 15. Turquoise (tło: supergreen)
+        15 => { :bg => 7, :sobrietyColor => 58, :textColor => 1, :battFull => 56, :battMid => 25, :battLow => 11 },
+        
+        // 16. Orchid (tło: white)
+        16 => { :bg => 8, :sobrietyColor => 85, :textColor => 2, :battFull => 82, :battMid => 25, :battLow => 11 },
+        
+        // 17. Pink Power (tło: black)
+        17 => { :bg => 1, :sobrietyColor => 94, :textColor => 88, :battFull => 85, :battMid => 25, :battLow => 11 },
+        
+        // 18. Chocolate (tło: blue)
+        18 => { :bg => 2, :sobrietyColor => 30, :textColor => 1, :battFull => 104, :battMid => 25, :battLow => 11 },
+        
+        // 19. Sky Blue (tło: clean)
+        19 => { :bg => 5, :sobrietyColor => 75, :textColor => 2, :battFull => 66, :battMid => 25, :battLow => 11 },
+        
+        // 20. Violet Rose (tło: white)
+        20 => { :bg => 8, :sobrietyColor => 98, :textColor => 2, :battFull => 82, :battMid => 25, :battLow => 11 }
     };
 
     // Zwraca liczbę pełnych dni trzeźwości
