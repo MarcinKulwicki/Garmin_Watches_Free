@@ -7,11 +7,11 @@
     <property id="UseMilitaryFormat" type="boolean">false</property>
 
     <!-- ===== SOBRIETY START DATE/TIME ===== -->
-    <property id="SobrietyYear" type="number">2025</property>
-    <property id="SobrietyMonth" type="number">2</property>
-    <property id="SobrietyDay" type="number">8</property>
-    <property id="SobrietyHour" type="number">11</property>
-    <property id="SobrietyMinute" type="number">50</property>
+    <property id="SobrietyYear" type="number">0</property>
+    <property id="SobrietyMonth" type="number">0</property>
+    <property id="SobrietyDay" type="number">0</property>
+    <property id="SobrietyHour" type="number">0</property>
+    <property id="SobrietyMinute" type="number">0</property>
 
     <!-- ===== FIELD DATA CONFIGURATION ===== -->
     <property id="UpperFieldData" type="number">2</property> <!-- Date -->
