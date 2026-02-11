@@ -4,4 +4,8 @@
     <bitmap id="Background2" filename="../images/background-blue.png" />
     <bitmap id="Background3" filename="../images/background-green.png" />
     <bitmap id="Background4" filename="../images/background-pink.png" />
+    <bitmap id="Background5" filename="../images/background-clean.png" />
+    <bitmap id="Background6" filename="../images/background-gold.png" />
+    <bitmap id="Background7" filename="../images/background-supergreen.png" />
+    <bitmap id="Background8" filename="../images/background-white.png" />
 </drawables>

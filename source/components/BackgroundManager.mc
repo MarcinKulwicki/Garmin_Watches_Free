@@ -47,6 +47,10 @@ module BackgroundManager {
             case 2: return Application.loadResource(Rez.Drawables.Background2);
             case 3: return Application.loadResource(Rez.Drawables.Background3);
             case 4: return Application.loadResource(Rez.Drawables.Background4);
+            case 5: return Application.loadResource(Rez.Drawables.Background5);
+            case 6: return Application.loadResource(Rez.Drawables.Background6);
+            case 7: return Application.loadResource(Rez.Drawables.Background7);
+            case 8: return Application.loadResource(Rez.Drawables.Background8);
             default: return Application.loadResource(Rez.Drawables.Background1);
         }
     }

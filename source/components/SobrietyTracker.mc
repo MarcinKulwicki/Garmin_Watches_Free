@@ -17,28 +17,28 @@ module SobrietyTracker {
     // Predefiniowane motywy - użytkownik wybiera tylko ID (1-20)
     const THEMES = {
         // Podstawowe motywy (1-10)
-        1 => { :bg => 1, :sobrietyColor => 30, :textColor => 1, :battFull => 40, :battMid => 30, :battLow => 11 },  // Gold accent (zmienione z Blue)
-        2 => { :bg => 2, :sobrietyColor => 43, :textColor => 1, :battFull => 40, :battMid => 30, :battLow => 11 },  // Lime Green accent
-        3 => { :bg => 3, :sobrietyColor => 29, :textColor => 1, :battFull => 40, :battMid => 30, :battLow => 11 },  // Yellow accent
-        4 => { :bg => 4, :sobrietyColor => 25, :textColor => 1, :battFull => 40, :battMid => 30, :battLow => 11 },  // Orange accent
-        5 => { :bg => 1, :sobrietyColor => 82, :textColor => 1, :battFull => 40, :battMid => 30, :battLow => 11 },  // Purple accent
-        6 => { :bg => 2, :sobrietyColor => 66, :textColor => 1, :battFull => 40, :battMid => 30, :battLow => 11 },  // Blue accent (przeniesione tutaj)
-        7 => { :bg => 3, :sobrietyColor => 11, :textColor => 1, :battFull => 40, :battMid => 30, :battLow => 11 },  // Red accent
-        8 => { :bg => 4, :sobrietyColor => 93, :textColor => 1, :battFull => 40, :battMid => 30, :battLow => 11 },  // Magenta accent
-        9 => { :bg => 1, :sobrietyColor => 56, :textColor => 1, :battFull => 40, :battMid => 30, :battLow => 11 },  // Cyan accent
-        10 => { :bg => 2, :sobrietyColor => 1, :textColor => 2, :battFull => 66, :battMid => 82, :battLow => 11 }, // Light mode (White text on dark)
+        1 => { :bg => 1, :sobrietyColor => 30, :textColor => 1, :battFull => 40, :battMid => 30, :battLow => 11 },
+        2 => { :bg => 2, :sobrietyColor => 43, :textColor => 1, :battFull => 40, :battMid => 30, :battLow => 11 },
+        3 => { :bg => 3, :sobrietyColor => 29, :textColor => 1, :battFull => 40, :battMid => 30, :battLow => 11 },
+        4 => { :bg => 4, :sobrietyColor => 25, :textColor => 1, :battFull => 40, :battMid => 30, :battLow => 11 },
+        5 => { :bg => 5, :sobrietyColor => 82, :textColor => 1, :battFull => 40, :battMid => 30, :battLow => 11 },
+        6 => { :bg => 6, :sobrietyColor => 66, :textColor => 1, :battFull => 40, :battMid => 30, :battLow => 11 },
+        7 => { :bg => 7, :sobrietyColor => 11, :textColor => 1, :battFull => 40, :battMid => 30, :battLow => 11 },
+        8 => { :bg => 8, :sobrietyColor => 93, :textColor => 1, :battFull => 40, :battMid => 30, :battLow => 11 },
+        9 => { :bg => 1, :sobrietyColor => 56, :textColor => 1, :battFull => 40, :battMid => 30, :battLow => 11 },
+        10 => { :bg => 2, :sobrietyColor => 1, :textColor => 2, :battFull => 66, :battMid => 82, :battLow => 11 },
         
         // Dodatkowe motywy (11-20)
-        11 => { :bg => 3, :sobrietyColor => 71, :textColor => 1, :battFull => 66, :battMid => 56, :battLow => 82 }, // Royal Blue
-        12 => { :bg => 4, :sobrietyColor => 54, :textColor => 1, :battFull => 40, :battMid => 43, :battLow => 29 }, // Sea Green
-        13 => { :bg => 1, :sobrietyColor => 94, :textColor => 1, :battFull => 93, :battMid => 82, :battLow => 11 }, // Deep Pink
-        14 => { :bg => 2, :sobrietyColor => 36, :textColor => 1, :battFull => 29, :battMid => 25, :battLow => 11 }, // Banana Yellow
-        15 => { :bg => 3, :sobrietyColor => 58, :textColor => 1, :battFull => 56, :battMid => 66, :battLow => 82 }, // Turquoise
-        16 => { :bg => 4, :sobrietyColor => 85, :textColor => 1, :battFull => 82, :battMid => 93, :battLow => 94 }, // Orchid
-        17 => { :bg => 1, :sobrietyColor => 48, :textColor => 2, :battFull => 40, :battMid => 29, :battLow => 11 }, // Lawn Green (light bg)
-        18 => { :bg => 2, :sobrietyColor => 104, :textColor => 1, :battFull => 101, :battMid => 25, :battLow => 11 }, // Chocolate
-        19 => { :bg => 3, :sobrietyColor => 75, :textColor => 2, :battFull => 66, :battMid => 56, :battLow => 82 }, // Sky Blue (light bg)
-        20 => { :bg => 4, :sobrietyColor => 98, :textColor => 1, :battFull => 93, :battMid => 94, :battLow => 11 }  // Pale Violet Red
+        11 => { :bg => 3, :sobrietyColor => 71, :textColor => 1, :battFull => 66, :battMid => 56, :battLow => 82 },
+        12 => { :bg => 4, :sobrietyColor => 54, :textColor => 1, :battFull => 40, :battMid => 43, :battLow => 29 },
+        13 => { :bg => 5, :sobrietyColor => 94, :textColor => 1, :battFull => 93, :battMid => 82, :battLow => 11 },
+        14 => { :bg => 6, :sobrietyColor => 36, :textColor => 1, :battFull => 29, :battMid => 25, :battLow => 11 },
+        15 => { :bg => 7, :sobrietyColor => 58, :textColor => 1, :battFull => 56, :battMid => 66, :battLow => 82 },
+        16 => { :bg => 8, :sobrietyColor => 85, :textColor => 1, :battFull => 82, :battMid => 93, :battLow => 94 },
+        17 => { :bg => 1, :sobrietyColor => 48, :textColor => 2, :battFull => 40, :battMid => 29, :battLow => 11 },
+        18 => { :bg => 2, :sobrietyColor => 104, :textColor => 1, :battFull => 101, :battMid => 25, :battLow => 11 },
+        19 => { :bg => 5, :sobrietyColor => 75, :textColor => 2, :battFull => 66, :battMid => 56, :battLow => 82 },
+        20 => { :bg => 8, :sobrietyColor => 98, :textColor => 1, :battFull => 93, :battMid => 94, :battLow => 11 }
     };
 
     // Zwraca liczbę pełnych dni trzeźwości
