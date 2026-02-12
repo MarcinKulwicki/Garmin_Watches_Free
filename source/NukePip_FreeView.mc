@@ -9,6 +9,7 @@ class NukePip_FreeView extends WatchUi.WatchFace {
     private var font40;
     private var currentFont = 1;
     private var isLowPowerMode = false;
+    private var hasStartedAnimation = false;
 
     function initialize() {
         WatchFace.initialize();
@@ -58,7 +59,7 @@ class NukePip_FreeView extends WatchUi.WatchFace {
         FieldRenderer.drawField(dc, "Lower", centerX, dc.getHeight() * 13 / 16, 
                                 fontSmall, Graphics.TEXT_JUSTIFY_CENTER);
         
-        // LEWA STRONA - Dni trzeźwości
+        // LEWA STRONA - Dni trzeźwości (z animacją)
         FieldRenderer.drawSideField(dc, "Left", dc.getHeight() * 6 / 10, true, fontSmall);
         
         // PRAWA STRONA - Temperatura lub Powiadomienia (wybór użytkownika)
@@ -79,18 +80,39 @@ class NukePip_FreeView extends WatchUi.WatchFace {
     }
 
     function onShow() as Void {
+        // Uruchom animację gdy tarcza jest pokazywana
+        if (!hasStartedAnimation && !isLowPowerMode) {
+            var leftFieldData = SettingsHelper.getNumberProperty("LeftFieldData", DataHelper.DATA_NONE);
+            
+            // Sprawdź czy lewe pole to licznik dni trzeźwości
+            if (leftFieldData == DataHelper.DATA_SOBRIETY_DAYS) {
+                var targetDays = SobrietyTracker.getDaysSober();
+                SobrietyAnimator.startAnimation(targetDays, method(:onAnimationUpdate));
+                hasStartedAnimation = true;
+            }
+        }
+    }
+    
+    function onAnimationUpdate() as Void {
+        WatchUi.requestUpdate();
     }
 
     function onHide() as Void {
+        // Zatrzymaj animację gdy tarcza jest ukrywana
+        SobrietyAnimator.stopAnimation();
+        hasStartedAnimation = false;
     }
 
     function onExitSleep() as Void {
         isLowPowerMode = false;
+        hasStartedAnimation = false; // Reset animacji po wyjściu ze snu
         WatchUi.requestUpdate();
     }
 
     function onEnterSleep() as Void {
         isLowPowerMode = true;
+        SobrietyAnimator.forceComplete(); // Zakończ animację natychmiast
+        hasStartedAnimation = false;
         WatchUi.requestUpdate();
     }
 }

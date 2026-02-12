@@ -21,7 +21,7 @@ module DataHelper {
         DATA_ALTITUDE = 9,
         DATA_NOTIFICATIONS = 10,
         DATA_SECONDS = 11,
-        DATA_SOBRIETY_DAYS = 12  // NOWY TYP
+        DATA_SOBRIETY_DAYS = 12
     }
 
     function getDataString(dataType as Number) as String {
@@ -187,8 +187,14 @@ module DataHelper {
         return System.getClockTime().sec.format("%02d");
     }
 
-    // NOWA FUNKCJA - zwraca dni trzeźwości jako string
+    // Zwraca dni trzeźwości jako string (z animacją)
     function getSobrietyDaysString() as String {
+        // Jeśli animacja jest aktywna, zwróć aktualną wartość animowaną
+        if (SobrietyAnimator.isCurrentlyAnimating()) {
+            return SobrietyAnimator.getCurrentValue().toString();
+        }
+        
+        // W przeciwnym razie zwróć rzeczywistą wartość
         var days = SobrietyTracker.getDaysSober();
         return days.toString();
     }
