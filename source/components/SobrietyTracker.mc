@@ -151,7 +151,6 @@ module SobrietyTracker {
         var month = SettingsHelper.getNumberProperty("SobrietyMonth", 0);
         var day = SettingsHelper.getNumberProperty("SobrietyDay", 0);
         var hour = SettingsHelper.getNumberProperty("SobrietyHour", 0);
-        var minute = SettingsHelper.getNumberProperty("SobrietyMinute", 0);
         
         // Jeśli nie ustawiono - zwróć aktualny czas
         if (year == 0 || month == 0 || day == 0) {
@@ -169,7 +168,7 @@ module SobrietyTracker {
             :month => month,
             :day => day,
             :hour => hour,
-            :minute => minute,
+            :minute => 0,
             :second => 0
         };
         

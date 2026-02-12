@@ -13,12 +13,8 @@
         <settingConfig type="numeric" min="1" max="31" />
     </setting>
 
-    <setting propertyKey="@Properties.SobrietyHour" title="▶ Sobriety Start Hour">
+    <setting propertyKey="@Properties.SobrietyHour" title="▶ Sobriety Start Hour (0-23)">
         <settingConfig type="numeric" min="0" max="23" />
-    </setting>
-
-    <setting propertyKey="@Properties.SobrietyMinute" title="▶ Sobriety Start Minute">
-        <settingConfig type="numeric" min="0" max="59" />
     </setting>
 
     <!-- ===== RIGHT FIELD CONFIGURATION ===== -->
