@@ -16,7 +16,7 @@ module SobrietyTracker {
     
     // Predefiniowane motywy - użytkownik wybiera tylko ID (1-20)
     const THEMES = {
-        // 1. Black (tło: black)
+        // ok // 1. Black Sabbath (tło: black)
         1 => { :bg => 1, :sobrietyColor => 10, :textColor => 2, :battFull => 10, :battMid => 9, :battLow => 7 },
         
         // 2. Blue Ocean (tło: blue)
@@ -37,10 +37,10 @@ module SobrietyTracker {
         // 7. Super Green (tło: supergreen)
         7 => { :bg => 7, :sobrietyColor => 39, :textColor => 2, :battFull => 40, :battMid => 25, :battLow => 11 },
         
-        // 8. Pure White (tło: white)
-        8 => { :bg => 8, :sobrietyColor => 82, :textColor => 2, :battFull => 71, :battMid => 25, :battLow => 11 },
+        // ok // 8. Rose Blackberry (tło: white) 
+        8 => { :bg => 8, :sobrietyColor => 82, :textColor => 2, :battFull => 82, :battMid => 86, :battLow => 88 },
         
-        // 9. Green Red Black (tło: black)
+        // 9. Green Day (tło: black)
         9 => { :bg => 1, :sobrietyColor => 24, :textColor => 64, :battFull => 64, :battMid => 31, :battLow => 24 },
         
         // 10. Blue Contrast (tło: blue)
@@ -61,10 +61,10 @@ module SobrietyTracker {
         // 15. Turquoise (tło: supergreen)
         15 => { :bg => 7, :sobrietyColor => 58, :textColor => 1, :battFull => 56, :battMid => 25, :battLow => 11 },
         
-        // 16. Orchid (tło: white)
-        16 => { :bg => 8, :sobrietyColor => 85, :textColor => 2, :battFull => 82, :battMid => 25, :battLow => 11 },
+        // ok // 16. Rose Blueberry (tło: white)
+        16 => { :bg => 8, :sobrietyColor => 70, :textColor => 80, :battFull => 70, :battMid => 80, :battLow => 2 },
         
-        // 17. Pink Power (tło: black)
+        // 17. Black Pink (tło: black)
         17 => { :bg => 1, :sobrietyColor => 94, :textColor => 88, :battFull => 85, :battMid => 25, :battLow => 11 },
         
         // 18. Chocolate (tło: blue)
@@ -73,8 +73,8 @@ module SobrietyTracker {
         // 19. Sky Blue (tło: clean)
         19 => { :bg => 5, :sobrietyColor => 75, :textColor => 2, :battFull => 66, :battMid => 25, :battLow => 11 },
         
-        // 20. Violet Rose (tło: white)
-        20 => { :bg => 8, :sobrietyColor => 98, :textColor => 2, :battFull => 82, :battMid => 25, :battLow => 11 }
+        // ok // 20. Rose Grape (tło: white)
+        20 => { :bg => 8, :sobrietyColor => 82, :textColor => 7, :battFull => 82, :battMid => 86, :battLow => 88 }
     };
 
     // Zwraca liczbę pełnych dni trzeźwości
