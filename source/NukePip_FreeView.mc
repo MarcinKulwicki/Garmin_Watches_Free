@@ -4,10 +4,6 @@ import Toybox.Application;
 import Toybox.Lang;
 
 class NukePip_FreeView extends WatchUi.WatchFace {
-    private var fontRegular;
-    private var fontSmall;
-    private var font40;
-    private var currentFont = 1;
     private var isLowPowerMode = false;
     private var hasStartedAnimation = false;
 
@@ -16,24 +12,11 @@ class NukePip_FreeView extends WatchUi.WatchFace {
     }
 
     function onLayout(dc as Dc) as Void {
-        loadFonts();
-    }
-
-    function loadFonts() as Void {
-        var choice = SettingsHelper.getNumberProperty("FontChoice", 1);
-        currentFont = choice;
-        
-        fontRegular = Application.loadResource(Rez.Fonts.OrbitronRegular);
-        fontSmall = Application.loadResource(Rez.Fonts.OrbitronSmall);
-        font40 = Application.loadResource(Rez.Fonts.Orbitron40);
+        // Inicjalizacja skalowania czcionek
+        FontScaler.loadScaledFonts(dc.getWidth(), dc.getHeight());
     }
 
     function onUpdate(dc as Dc) as Void {
-        var fontChoice = SettingsHelper.getNumberProperty("FontChoice", 1);
-        if (fontChoice != currentFont) { 
-            loadFonts(); 
-        }
-
         if (isLowPowerMode) {
             drawLowPowerMode(dc);
             return;
@@ -47,22 +30,27 @@ class NukePip_FreeView extends WatchUi.WatchFace {
         
         var centerX = dc.getWidth() / 2;
         
-        // GÓRNY - Data
+        // Pobieramy przeskalowane czcionki
+        var fontLarge = FontScaler.getFontForSize(dc, :large);
+        var fontMedium = FontScaler.getFontForSize(dc, :medium);
+        var fontSmall = FontScaler.getFontForSize(dc, :small);
+        
+        // GÓRNY - Data (używamy średniej czcionki)
         FieldRenderer.drawField(dc, "Upper", centerX, dc.getHeight() / 7, 
-                                font40, Graphics.TEXT_JUSTIFY_CENTER);
+                                fontMedium, Graphics.TEXT_JUSTIFY_CENTER);
         
-        // ŚRODEK - Czas
+        // ŚRODEK - Czas (używamy dużej czcionki)
         FieldRenderer.drawField(dc, "Middle", centerX, dc.getHeight() * 4 / 10, 
-                                fontRegular, Graphics.TEXT_JUSTIFY_CENTER);
+                                fontLarge, Graphics.TEXT_JUSTIFY_CENTER);
         
-        // DÓŁ - Kroki
+        // DÓŁ - Kroki (używamy małej czcionki)
         FieldRenderer.drawField(dc, "Lower", centerX, dc.getHeight() * 13 / 16, 
                                 fontSmall, Graphics.TEXT_JUSTIFY_CENTER);
         
-        // LEWA STRONA - Dni trzeźwości (z animacją)
+        // LEWA STRONA - Dni trzeźwości (z animacją, używamy małej czcionki)
         FieldRenderer.drawSideField(dc, "Left", dc.getHeight() * 6 / 10, true, fontSmall);
         
-        // PRAWA STRONA - Temperatura lub Powiadomienia (wybór użytkownika)
+        // PRAWA STRONA - Temperatura lub Powiadomienia (używamy małej czcionki)
         FieldRenderer.drawSideField(dc, "Right", dc.getHeight() * 6 / 10, false, fontSmall);
     }
 
@@ -74,8 +62,10 @@ class NukePip_FreeView extends WatchUi.WatchFace {
         var centerY = dc.getHeight() / 2;
         var timeString = DataHelper.getTimeString();
         
+        var fontLarge = FontScaler.getFontForSize(dc, :large);
+        
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(centerX, centerY, fontRegular, timeString, 
+        dc.drawText(centerX, centerY, fontLarge, timeString, 
                     Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 

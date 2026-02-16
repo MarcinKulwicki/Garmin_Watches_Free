@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <fonts>
-    <!-- Orbitron -->
-    <font id="OrbitronRegular" filename="Orbitron/Orbitron-102.fnt" />
-    <font id="OrbitronSmall" filename="Orbitron/Orbitron-52.fnt" />
+    <!-- Orbitron - wszystkie rozmiary -->
+    <font id="Orbitron30" filename="Orbitron/Orbitron-30.fnt" />
     <font id="Orbitron40" filename="Orbitron/Orbitron-40.fnt" />
+    <font id="Orbitron52" filename="Orbitron/Orbitron-52.fnt" />
+    <font id="Orbitron70" filename="Orbitron/Orbitron-70.fnt" />
+    <font id="Orbitron85" filename="Orbitron/Orbitron-85.fnt" />
+    <font id="Orbitron102" filename="Orbitron/Orbitron-102.fnt" />
 </fonts>
