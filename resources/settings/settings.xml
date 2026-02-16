@@ -26,7 +26,7 @@
     </setting>
 
     <!-- ===== MILESTONE THEMES ===== -->
-    <setting propertyKey="@Properties.Milestone1Theme" title="▶ M1 Theme (1-6 days)">
+    <setting propertyKey="@Properties.Milestone1Theme" title="▶ Milestone 1 Theme (1-6 days)">
         <settingConfig type="list">
             <listEntry value="1">Black Sabbath</listEntry>
             <listEntry value="2">Blue Ocean</listEntry>
@@ -51,7 +51,7 @@
         </settingConfig>
     </setting>
 
-    <setting propertyKey="@Properties.Milestone2Theme" title="▶ M2 Theme (7-29 days)">
+    <setting propertyKey="@Properties.Milestone2Theme" title="▶ Milestone 2 Theme (7-29 days)">
         <settingConfig type="list">
             <listEntry value="1">Black Sabbath</listEntry>
             <listEntry value="2">Blue Ocean</listEntry>
@@ -76,7 +76,7 @@
         </settingConfig>
     </setting>
 
-    <setting propertyKey="@Properties.Milestone3Theme" title="▶ M3 Theme (30-89 days)">
+    <setting propertyKey="@Properties.Milestone3Theme" title="▶ Milestone 3 Theme (30-89 days)">
         <settingConfig type="list">
             <listEntry value="1">Black Sabbath</listEntry>
             <listEntry value="2">Blue Ocean</listEntry>
@@ -101,7 +101,7 @@
         </settingConfig>
     </setting>
 
-    <setting propertyKey="@Properties.Milestone4Theme" title="▶ M4 Theme (90-179 days)">
+    <setting propertyKey="@Properties.Milestone4Theme" title="▶ Milestone 4 Theme (90-179 days)">
         <settingConfig type="list">
             <listEntry value="1">Black Sabbath</listEntry>
             <listEntry value="2">Blue Ocean</listEntry>
@@ -126,7 +126,7 @@
         </settingConfig>
     </setting>
 
-    <setting propertyKey="@Properties.Milestone5Theme" title="▶ M5 Theme (180-364 days)">
+    <setting propertyKey="@Properties.Milestone5Theme" title="▶ Milestone 5 Theme (180-364 days)">
         <settingConfig type="list">
             <listEntry value="1">Black Sabbath</listEntry>
             <listEntry value="2">Blue Ocean</listEntry>
@@ -151,7 +151,7 @@
         </settingConfig>
     </setting>
 
-    <setting propertyKey="@Properties.Milestone6Theme" title="▶ M6 Theme (365+ days)">
+    <setting propertyKey="@Properties.Milestone6Theme" title="▶ Milestone 6 Theme (365+ days)">
         <settingConfig type="list">
             <listEntry value="1">Black Sabbath</listEntry>
             <listEntry value="2">Blue Ocean</listEntry>
