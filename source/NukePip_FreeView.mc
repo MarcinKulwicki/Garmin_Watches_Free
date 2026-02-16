@@ -6,6 +6,7 @@ import Toybox.Lang;
 class NukePip_FreeView extends WatchUi.WatchFace {
     private var isLowPowerMode = false;
     private var hasStartedAnimation = false;
+    private var lastUpdateTime = 0;
 
     function initialize() {
         WatchFace.initialize();
@@ -21,6 +22,9 @@ class NukePip_FreeView extends WatchUi.WatchFace {
             drawLowPowerMode(dc);
             return;
         }
+
+        // Sprawdź czy powinniśmy uruchomić animację przy każdym odświeżeniu
+        checkAndStartAnimation();
 
         // Rysujemy tło z aktualnego motywu milestone
         BackgroundManager.drawBackground(dc);
@@ -69,18 +73,29 @@ class NukePip_FreeView extends WatchUi.WatchFace {
                     Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
-    function onShow() as Void {
-        // Uruchom animację gdy tarcza jest pokazywana
+    // Sprawdza i uruchamia animację przy każdym przebudzeniu
+    function checkAndStartAnimation() as Void {
         if (!hasStartedAnimation && !isLowPowerMode) {
             var leftFieldData = SettingsHelper.getNumberProperty("LeftFieldData", DataHelper.DATA_NONE);
             
             // Sprawdź czy lewe pole to licznik dni trzeźwości
             if (leftFieldData == DataHelper.DATA_SOBRIETY_DAYS) {
                 var targetDays = SobrietyTracker.getDaysSober();
-                SobrietyAnimator.startAnimation(targetDays, method(:onAnimationUpdate));
-                hasStartedAnimation = true;
+                
+                // Uruchom animację tylko jeśli minęło wystarczająco czasu od ostatniego uruchomienia
+                var currentTime = System.getTimer();
+                if (currentTime - lastUpdateTime > 1000) { // 1 sekunda cooldown
+                    SobrietyAnimator.startAnimation(targetDays, method(:onAnimationUpdate));
+                    hasStartedAnimation = true;
+                    lastUpdateTime = currentTime;
+                }
             }
         }
+    }
+
+    function onShow() as Void {
+        // Reset flagi przy każdym pokazaniu tarczy
+        hasStartedAnimation = false;
     }
     
     function onAnimationUpdate() as Void {
@@ -104,5 +119,11 @@ class NukePip_FreeView extends WatchUi.WatchFace {
         SobrietyAnimator.forceComplete(); // Zakończ animację natychmiast
         hasStartedAnimation = false;
         WatchUi.requestUpdate();
+    }
+
+    // Obsługa częściowego odświeżenia (przy ruchu ręki)
+    function onPartialUpdate(dc as Dc) as Void {
+        // Reset flagi przy każdym przebudzeniu ekranu
+        hasStartedAnimation = false;
     }
 }
