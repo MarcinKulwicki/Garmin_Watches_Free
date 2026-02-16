@@ -8,27 +8,29 @@ module SobrietyAnimator {
     var targetValue = 0;
     var isAnimating = false;
     var animationCallback = null;
+    var milestones = null;
+    var currentMilestoneIndex = 0;
     
-    const MAX_ANIMATION_DURATION_MS = 1500; // 1.5 sekundy maksymalnie
-    const MIN_FRAME_DELAY_MS = 16; // ~60 FPS
-    const MAX_FRAME_DELAY_MS = 80; // Najwolniejsza animacja
+    const ANIMATION_FRAME_DELAY_MS = 80; // ~12 FPS
+    const QUICK_FRAME_DELAY_MS = 120; // Dla małych liczb
     
     function startAnimation(targetDays as Number, callback as Method) as Void {
         if (targetDays <= 0) {
-            return; // Nie animujemy dla 0 lub ujemnych wartości
+            return;
         }
         
-        stopAnimation(); // Zatrzymaj poprzednią animację jeśli istnieje
+        stopAnimation();
         
         currentAnimatedValue = 0;
         targetValue = targetDays;
         isAnimating = true;
         animationCallback = callback;
+        currentMilestoneIndex = 0;
         
-        // Oblicz optymalne tempo animacji
-        var frameDelay = calculateFrameDelay(targetDays);
+        milestones = generateMilestones(targetDays);
         
-        // Tworzymy wrapper callback który wywołuje naszą funkcję
+        var frameDelay = (targetDays <= 20) ? QUICK_FRAME_DELAY_MS : ANIMATION_FRAME_DELAY_MS;
+        
         var timerCallback = new Lang.Method(SobrietyAnimator, :onAnimationTick);
         
         animationTimer = new Timer.Timer();
@@ -42,68 +44,136 @@ module SobrietyAnimator {
         }
         isAnimating = false;
         animationCallback = null;
+        milestones = null;
+        currentMilestoneIndex = 0;
     }
     
     function onAnimationTick() as Void {
-        if (!isAnimating) {
+        if (!isAnimating || milestones == null) {
             stopAnimation();
             return;
         }
         
-        // Zwiększ wartość - im bliżej celu, tym mniejszy skok
-        var remaining = targetValue - currentAnimatedValue;
-        var increment;
-        
-        if (targetValue <= 30) {
-            // Dla małych liczb - po 1
-            increment = 1;
-        } else if (targetValue <= 100) {
-            // Dla średnich - po 2-3
-            increment = (remaining > 10) ? 2 : 1;
-        } else {
-            // Dla dużych - dynamiczny skok
-            increment = (remaining / 20).toNumber();
-            if (increment < 1) { increment = 1; }
-            if (increment > 10) { increment = 10; }
-        }
-        
-        currentAnimatedValue += increment;
-        
-        // Nie przekraczaj celu
-        if (currentAnimatedValue >= targetValue) {
+        if (currentMilestoneIndex >= milestones.size()) {
             currentAnimatedValue = targetValue;
             stopAnimation();
+            if (animationCallback != null) {
+                animationCallback.invoke();
+            }
+            return;
         }
         
-        // Wywołaj callback aby odświeżyć widok
+        currentAnimatedValue = milestones[currentMilestoneIndex];
+        currentMilestoneIndex++;
+        
         if (animationCallback != null) {
             animationCallback.invoke();
         }
     }
     
-    function calculateFrameDelay(days as Number) as Number {
-        // Oblicz ile klatek potrzebujemy
-        var totalFrames;
+    function generateMilestones(target as Number) as Array {
+        var result = [0];
         
-        if (days <= 30) {
-            totalFrames = days; // Każdy dzień = 1 klatka
-        } else if (days <= 100) {
-            totalFrames = 30 + ((days - 30) / 2); // Pierwsze 30 + reszta co 2
-        } else {
-            totalFrames = 30 + 35 + ((days - 100) / 10); // Pierwsze 30 + 35 + reszta co 10
+        // 1-10 dni: każdy dzień (0,1,2,3,4...)
+        if (target <= 10) {
+            for (var i = 1; i <= target; i++) {
+                result.add(i);
+            }
+            return result;
         }
         
-        // Oblicz delay aby zmieścić się w MAX_ANIMATION_DURATION_MS
-        var frameDelay = (MAX_ANIMATION_DURATION_MS / totalFrames).toNumber();
-        
-        // Ogranicz do rozsądnych wartości
-        if (frameDelay < MIN_FRAME_DELAY_MS) {
-            frameDelay = MIN_FRAME_DELAY_MS;
-        } else if (frameDelay > MAX_FRAME_DELAY_MS) {
-            frameDelay = MAX_FRAME_DELAY_MS;
+        // 11-99 dni: najpierw dziesiątki, potem jedności
+        if (target <= 99) {
+            var finalTens = (target / 10).toNumber() * 10;
+            var finalOnes = target % 10;
+            
+            // Animuj dziesiątki (10, 20, 30, 40...)
+            for (var i = 10; i <= finalTens; i += 10) {
+                result.add(i);
+            }
+            
+            // Animuj jedności (jeśli są)
+            if (finalOnes > 0) {
+                for (var i = 1; i <= finalOnes; i++) {
+                    result.add(finalTens + i);
+                }
+            }
+            
+            return result;
         }
         
-        return frameDelay;
+        // 100-999 dni: najpierw setki, potem dziesiątki, potem jedności
+        if (target <= 999) {
+            var finalHundreds = (target / 100).toNumber() * 100;
+            var remainder = target % 100;
+            var finalTens = (remainder / 10).toNumber() * 10;
+            var finalOnes = remainder % 10;
+            
+            // Animuj setki (100, 200, 300...)
+            for (var i = 100; i <= finalHundreds; i += 100) {
+                result.add(i);
+            }
+            
+            // Animuj dziesiątki (finalHundreds + 10, +20, +30...)
+            if (finalTens > 0) {
+                for (var i = 10; i <= finalTens; i += 10) {
+                    result.add(finalHundreds + i);
+                }
+            }
+            
+            // Animuj jedności
+            if (finalOnes > 0) {
+                var base = finalHundreds + finalTens;
+                for (var i = 1; i <= finalOnes; i++) {
+                    result.add(base + i);
+                }
+            }
+            
+            return result;
+        }
+        
+        // 1000+ dni: tysiące, setki, dziesiątki, jedności
+        var finalThousands = (target / 1000).toNumber() * 1000;
+        var remainder = target % 1000;
+        var finalHundreds = (remainder / 100).toNumber() * 100;
+        remainder = remainder % 100;
+        var finalTens = (remainder / 10).toNumber() * 10;
+        var finalOnes = remainder % 10;
+        
+        // Animuj tysiące
+        for (var i = 1000; i <= finalThousands; i += 1000) {
+            result.add(i);
+        }
+        
+        // Animuj setki
+        if (finalHundreds > 0) {
+            for (var i = 100; i <= finalHundreds; i += 100) {
+                result.add(finalThousands + i);
+            }
+        }
+        
+        // Animuj dziesiątki
+        if (finalTens > 0) {
+            var base = finalThousands + finalHundreds;
+            for (var i = 10; i <= finalTens; i += 10) {
+                result.add(base + i);
+            }
+        }
+        
+        // Animuj jedności
+        if (finalOnes > 0) {
+            var base = finalThousands + finalHundreds + finalTens;
+            for (var i = 1; i <= finalOnes; i++) {
+                result.add(base + i);
+            }
+        }
+        
+        // Upewnij się że kończymy na target
+        if (result[result.size() - 1] != target) {
+            result.add(target);
+        }
+        
+        return result;
     }
     
     function getCurrentValue() as Number {
