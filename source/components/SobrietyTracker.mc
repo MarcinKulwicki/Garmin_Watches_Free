@@ -162,7 +162,7 @@ module SobrietyTracker {
             return Time.now();
         }
         
-        // Tworzenie Moment
+        // Tworzenie Moment z normalną godziną
         var options = {
             :year => year,
             :month => month,
@@ -179,6 +179,11 @@ module SobrietyTracker {
             return Time.now();
         }
         
+        // Odejmij 1 godzinę - konwertuj moment na sekundy, odejmij, i z powrotem na moment
+        var startSeconds = startMoment.value();
+        var adjustedSeconds = startSeconds - 3600; // Odejmij 3600 sekund (1 godzina)
+        startMoment = new Time.Moment(adjustedSeconds);
+        
         // Sprawdź czy data nie jest w przyszłości
         var now = Time.now();
         if (startMoment.greaterThan(now)) {
@@ -187,6 +192,7 @@ module SobrietyTracker {
         
         return startMoment;
     }
+
 
     // Waliduje datę (sprawdza czy istnieje)
     function isValidDate(year as Number, month as Number, day as Number) as Boolean {
