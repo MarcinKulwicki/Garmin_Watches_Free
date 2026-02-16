@@ -29,24 +29,24 @@
     <setting propertyKey="@Properties.Milestone1Theme" title="▶ Milestone 1 Theme (1-6 days)">
         <settingConfig type="list">
             <listEntry value="1">Black Sabbath</listEntry>
-            <listEntry value="2">Blue Ocean</listEntry>
-            <listEntry value="3">Green Forest</listEntry>
+            <listEntry value="2">Black Blue Jeans</listEntry>
+            <listEntry value="3">Silver Darkness</listEntry>
             <listEntry value="4">Pink Sunset</listEntry>
-            <listEntry value="5">Clean Minimal</listEntry>
-            <listEntry value="6">Gold Elegance</listEntry>
-            <listEntry value="7">Super Green</listEntry>
+            <listEntry value="5">Clean Black</listEntry>
+            <listEntry value="6">Easy Yellow</listEntry>
+            <listEntry value="7">Green Jungle</listEntry>
             <listEntry value="8">Rose Blackberry</listEntry>
             <listEntry value="9">Green Day</listEntry>
-            <listEntry value="10">Blue Contrast</listEntry>
-            <listEntry value="11">Royal Blue</listEntry>
-            <listEntry value="12">Sea Green</listEntry>
-            <listEntry value="13">Deep Pink</listEntry>
+            <listEntry value="10">White Blue Jeans</listEntry>
+            <listEntry value="11">Silver White</listEntry>
+            <listEntry value="12">Pink gold </listEntry>
+            <listEntry value="13">Clean Turquoise</listEntry>
             <listEntry value="14">Banana Yellow</listEntry>
-            <listEntry value="15">Turquoise</listEntry>
+            <listEntry value="15">Green Turquoise</listEntry>
             <listEntry value="16">Rose Blueberry</listEntry>
             <listEntry value="17">Black Pink</listEntry>
-            <listEntry value="18">Chocolate</listEntry>
-            <listEntry value="19">Sky Blue</listEntry>
+            <listEntry value="18">Blue Blue Jeans </listEntry>
+            <listEntry value="19">Clean Olive </listEntry>
             <listEntry value="20">Rose Grape</listEntry>
         </settingConfig>
     </setting>
@@ -54,24 +54,24 @@
     <setting propertyKey="@Properties.Milestone2Theme" title="▶ Milestone 2 Theme (7-29 days)">
         <settingConfig type="list">
             <listEntry value="1">Black Sabbath</listEntry>
-            <listEntry value="2">Blue Ocean</listEntry>
-            <listEntry value="3">Green Forest</listEntry>
+            <listEntry value="2">Black Blue Jeans</listEntry>
+            <listEntry value="3">Silver Darkness</listEntry>
             <listEntry value="4">Pink Sunset</listEntry>
-            <listEntry value="5">Clean Minimal</listEntry>
-            <listEntry value="6">Gold Elegance</listEntry>
-            <listEntry value="7">Super Green</listEntry>
+            <listEntry value="5">Clean Black</listEntry>
+            <listEntry value="6">Easy Yellow</listEntry>
+            <listEntry value="7">Green Jungle</listEntry>
             <listEntry value="8">Rose Blackberry</listEntry>
             <listEntry value="9">Green Day</listEntry>
-            <listEntry value="10">Blue Contrast</listEntry>
-            <listEntry value="11">Royal Blue</listEntry>
-            <listEntry value="12">Sea Green</listEntry>
-            <listEntry value="13">Deep Pink</listEntry>
+            <listEntry value="10">White Blue Jeans</listEntry>
+            <listEntry value="11">Silver White</listEntry>
+            <listEntry value="12">Pink gold </listEntry>
+            <listEntry value="13">Clean Turquoise</listEntry>
             <listEntry value="14">Banana Yellow</listEntry>
-            <listEntry value="15">Turquoise</listEntry>
+            <listEntry value="15">Green Turquoise</listEntry>
             <listEntry value="16">Rose Blueberry</listEntry>
             <listEntry value="17">Black Pink</listEntry>
-            <listEntry value="18">Chocolate</listEntry>
-            <listEntry value="19">Sky Blue</listEntry>
+            <listEntry value="18">Blue Blue Jeans </listEntry>
+            <listEntry value="19">Clean Olive </listEntry>
             <listEntry value="20">Rose Grape</listEntry>
         </settingConfig>
     </setting>
@@ -79,24 +79,24 @@
     <setting propertyKey="@Properties.Milestone3Theme" title="▶ Milestone 3 Theme (30-89 days)">
         <settingConfig type="list">
             <listEntry value="1">Black Sabbath</listEntry>
-            <listEntry value="2">Blue Ocean</listEntry>
-            <listEntry value="3">Green Forest</listEntry>
+            <listEntry value="2">Black Blue Jeans</listEntry>
+            <listEntry value="3">Silver Darkness</listEntry>
             <listEntry value="4">Pink Sunset</listEntry>
-            <listEntry value="5">Clean Minimal</listEntry>
-            <listEntry value="6">Gold Elegance</listEntry>
-            <listEntry value="7">Super Green</listEntry>
+            <listEntry value="5">Clean Black</listEntry>
+            <listEntry value="6">Easy Yellow</listEntry>
+            <listEntry value="7">Green Jungle</listEntry>
             <listEntry value="8">Rose Blackberry</listEntry>
             <listEntry value="9">Green Day</listEntry>
-            <listEntry value="10">Blue Contrast</listEntry>
-            <listEntry value="11">Royal Blue</listEntry>
-            <listEntry value="12">Sea Green</listEntry>
-            <listEntry value="13">Deep Pink</listEntry>
+            <listEntry value="10">White Blue Jeans</listEntry>
+            <listEntry value="11">Silver White</listEntry>
+            <listEntry value="12">Pink gold </listEntry>
+            <listEntry value="13">Clean Turquoise</listEntry>
             <listEntry value="14">Banana Yellow</listEntry>
-            <listEntry value="15">Turquoise</listEntry>
+            <listEntry value="15">Green Turquoise</listEntry>
             <listEntry value="16">Rose Blueberry</listEntry>
             <listEntry value="17">Black Pink</listEntry>
-            <listEntry value="18">Chocolate</listEntry>
-            <listEntry value="19">Sky Blue</listEntry>
+            <listEntry value="18">Blue Blue Jeans </listEntry>
+            <listEntry value="19">Clean Olive </listEntry>
             <listEntry value="20">Rose Grape</listEntry>
         </settingConfig>
     </setting>
@@ -104,24 +104,24 @@
     <setting propertyKey="@Properties.Milestone4Theme" title="▶ Milestone 4 Theme (90-179 days)">
         <settingConfig type="list">
             <listEntry value="1">Black Sabbath</listEntry>
-            <listEntry value="2">Blue Ocean</listEntry>
-            <listEntry value="3">Green Forest</listEntry>
+            <listEntry value="2">Black Blue Jeans</listEntry>
+            <listEntry value="3">Silver Darkness</listEntry>
             <listEntry value="4">Pink Sunset</listEntry>
-            <listEntry value="5">Clean Minimal</listEntry>
-            <listEntry value="6">Gold Elegance</listEntry>
-            <listEntry value="7">Super Green</listEntry>
+            <listEntry value="5">Clean Black</listEntry>
+            <listEntry value="6">Easy Yellow</listEntry>
+            <listEntry value="7">Green Jungle</listEntry>
             <listEntry value="8">Rose Blackberry</listEntry>
             <listEntry value="9">Green Day</listEntry>
-            <listEntry value="10">Blue Contrast</listEntry>
-            <listEntry value="11">Royal Blue</listEntry>
-            <listEntry value="12">Sea Green</listEntry>
-            <listEntry value="13">Deep Pink</listEntry>
+            <listEntry value="10">White Blue Jeans</listEntry>
+            <listEntry value="11">Silver White</listEntry>
+            <listEntry value="12">Pink gold </listEntry>
+            <listEntry value="13">Clean Turquoise</listEntry>
             <listEntry value="14">Banana Yellow</listEntry>
-            <listEntry value="15">Turquoise</listEntry>
+            <listEntry value="15">Green Turquoise</listEntry>
             <listEntry value="16">Rose Blueberry</listEntry>
             <listEntry value="17">Black Pink</listEntry>
-            <listEntry value="18">Chocolate</listEntry>
-            <listEntry value="19">Sky Blue</listEntry>
+            <listEntry value="18">Blue Blue Jeans </listEntry>
+            <listEntry value="19">Clean Olive </listEntry>
             <listEntry value="20">Rose Grape</listEntry>
         </settingConfig>
     </setting>
@@ -129,24 +129,24 @@
     <setting propertyKey="@Properties.Milestone5Theme" title="▶ Milestone 5 Theme (180-364 days)">
         <settingConfig type="list">
             <listEntry value="1">Black Sabbath</listEntry>
-            <listEntry value="2">Blue Ocean</listEntry>
-            <listEntry value="3">Green Forest</listEntry>
+            <listEntry value="2">Black Blue Jeans</listEntry>
+            <listEntry value="3">Silver Darkness</listEntry>
             <listEntry value="4">Pink Sunset</listEntry>
-            <listEntry value="5">Clean Minimal</listEntry>
-            <listEntry value="6">Gold Elegance</listEntry>
-            <listEntry value="7">Super Green</listEntry>
+            <listEntry value="5">Clean Black</listEntry>
+            <listEntry value="6">Easy Yellow</listEntry>
+            <listEntry value="7">Green Jungle</listEntry>
             <listEntry value="8">Rose Blackberry</listEntry>
             <listEntry value="9">Green Day</listEntry>
-            <listEntry value="10">Blue Contrast</listEntry>
-            <listEntry value="11">Royal Blue</listEntry>
-            <listEntry value="12">Sea Green</listEntry>
-            <listEntry value="13">Deep Pink</listEntry>
+            <listEntry value="10">White Blue Jeans</listEntry>
+            <listEntry value="11">Silver White</listEntry>
+            <listEntry value="12">Pink gold </listEntry>
+            <listEntry value="13">Clean Turquoise</listEntry>
             <listEntry value="14">Banana Yellow</listEntry>
-            <listEntry value="15">Turquoise</listEntry>
+            <listEntry value="15">Green Turquoise</listEntry>
             <listEntry value="16">Rose Blueberry</listEntry>
             <listEntry value="17">Black Pink</listEntry>
-            <listEntry value="18">Chocolate</listEntry>
-            <listEntry value="19">Sky Blue</listEntry>
+            <listEntry value="18">Blue Blue Jeans </listEntry>
+            <listEntry value="19">Clean Olive </listEntry>
             <listEntry value="20">Rose Grape</listEntry>
         </settingConfig>
     </setting>
@@ -154,24 +154,24 @@
     <setting propertyKey="@Properties.Milestone6Theme" title="▶ Milestone 6 Theme (365+ days)">
         <settingConfig type="list">
             <listEntry value="1">Black Sabbath</listEntry>
-            <listEntry value="2">Blue Ocean</listEntry>
-            <listEntry value="3">Green Forest</listEntry>
+            <listEntry value="2">Black Blue Jeans</listEntry>
+            <listEntry value="3">Silver Darkness</listEntry>
             <listEntry value="4">Pink Sunset</listEntry>
-            <listEntry value="5">Clean Minimal</listEntry>
-            <listEntry value="6">Gold Elegance</listEntry>
-            <listEntry value="7">Super Green</listEntry>
+            <listEntry value="5">Clean Black</listEntry>
+            <listEntry value="6">Easy Yellow</listEntry>
+            <listEntry value="7">Green Jungle</listEntry>
             <listEntry value="8">Rose Blackberry</listEntry>
             <listEntry value="9">Green Day</listEntry>
-            <listEntry value="10">Blue Contrast</listEntry>
-            <listEntry value="11">Royal Blue</listEntry>
-            <listEntry value="12">Sea Green</listEntry>
-            <listEntry value="13">Deep Pink</listEntry>
+            <listEntry value="10">White Blue Jeans</listEntry>
+            <listEntry value="11">Silver White</listEntry>
+            <listEntry value="12">Pink gold </listEntry>
+            <listEntry value="13">Clean Turquoise</listEntry>
             <listEntry value="14">Banana Yellow</listEntry>
-            <listEntry value="15">Turquoise</listEntry>
+            <listEntry value="15">Green Turquoise</listEntry>
             <listEntry value="16">Rose Blueberry</listEntry>
             <listEntry value="17">Black Pink</listEntry>
-            <listEntry value="18">Chocolate</listEntry>
-            <listEntry value="19">Sky Blue</listEntry>
+            <listEntry value="18">Blue Blue Jeans </listEntry>
+            <listEntry value="19">Clean Olive </listEntry>
             <listEntry value="20">Rose Grape</listEntry>
         </settingConfig>
     </setting>

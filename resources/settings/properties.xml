@@ -20,9 +20,9 @@
     <!-- ===== MILESTONE THEMES (użytkownik wybiera Theme 1-10) ===== -->
     <property id="Milestone1Theme" type="number">17</property> <!-- 1-6 days -->
     <property id="Milestone2Theme" type="number">8</property> <!-- 7-29 days -->
-    <property id="Milestone3Theme" type="number">9</property> <!-- 30-89 days -->
-    <property id="Milestone4Theme" type="number">16</property> <!-- 90-179 days -->
-    <property id="Milestone5Theme" type="number">20</property> <!-- 180-364 days -->
-    <property id="Milestone6Theme" type="number">1</property> <!-- 365+ days -->
+    <property id="Milestone3Theme" type="number">19</property> <!-- 30-89 days -->
+    <property id="Milestone4Theme" type="number">18</property> <!-- 90-179 days -->
+    <property id="Milestone5Theme" type="number">9</property> <!-- 180-364 days -->
+    <property id="Milestone6Theme" type="number">6</property> <!-- 365+ days -->
 
 </properties>

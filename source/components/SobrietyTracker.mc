@@ -19,59 +19,59 @@ module SobrietyTracker {
         // ok // 1. Black Sabbath (tło: black)
         1 => { :bg => 1, :sobrietyColor => 10, :textColor => 2, :battFull => 10, :battMid => 9, :battLow => 7 },
         
-        // 2. Blue Ocean (tło: blue)
+        // 2. Black Blue Jeans (tło: blue)
         2 => { :bg => 2, :sobrietyColor => 56, :textColor => 2, :battFull => 71, :battMid => 25, :battLow => 11 },
         
-        // 3. Green Forest (tło: green)
+        // 3. Silver Darkness (tło: green)
         3 => { :bg => 3, :sobrietyColor => 47, :textColor => 2, :battFull => 43, :battMid => 25, :battLow => 11 },
         
         // 4. Pink Sunset (tło: pink)
         4 => { :bg => 4, :sobrietyColor => 94, :textColor => 1, :battFull => 88, :battMid => 25, :battLow => 11 },
         
-        // 5. Clean Minimal (tło: clean)
+        // 5. Clean Black (tło: clean)
         5 => { :bg => 5, :sobrietyColor => 71, :textColor => 2, :battFull => 66, :battMid => 25, :battLow => 11 },
         
-        // 6. Gold Elegance (tło: gold)
-        6 => { :bg => 6, :sobrietyColor => 29, :textColor => 1, :battFull => 30, :battMid => 25, :battLow => 11 },
+        // 6. Easy Yellow (tło: gold)
+        6 => { :bg => 6, :sobrietyColor => 112, :textColor => 110, :battFull => 112, :battMid => 110, :battLow => 102 },
         
-        // 7. Super Green (tło: supergreen)
+        // 7. Green Jungle (tło: supergreen)
         7 => { :bg => 7, :sobrietyColor => 39, :textColor => 2, :battFull => 40, :battMid => 25, :battLow => 11 },
         
         // ok // 8. Rose Blackberry (tło: white) 
         8 => { :bg => 8, :sobrietyColor => 82, :textColor => 2, :battFull => 82, :battMid => 86, :battLow => 88 },
         
-        // 9. Green Day (tło: black)
+        // ok // 9. Green Day (tło: black)
         9 => { :bg => 1, :sobrietyColor => 24, :textColor => 64, :battFull => 64, :battMid => 31, :battLow => 24 },
         
-        // 10. Blue Contrast (tło: blue)
+        // 10. White Blue Jeans (tło: blue)
         10 => { :bg => 2, :sobrietyColor => 29, :textColor => 1, :battFull => 56, :battMid => 25, :battLow => 11 },
         
-        // 11. Royal Blue (tło: green)
+        // 11. Silver White (tło: green)
         11 => { :bg => 3, :sobrietyColor => 71, :textColor => 1, :battFull => 66, :battMid => 25, :battLow => 11 },
         
-        // 12. Sea Green (tło: pink)
-        12 => { :bg => 4, :sobrietyColor => 54, :textColor => 1, :battFull => 47, :battMid => 25, :battLow => 11 },
+        // 12. Pink gold  (tło: pink)
+        12 => { :bg => 4, :sobrietyColor => 37, :textColor => 30, :battFull => 37, :battMid => 30, :battLow => 2 },
         
-        // 13. Deep Pink (tło: clean)
-        13 => { :bg => 5, :sobrietyColor => 94, :textColor => 2, :battFull => 88, :battMid => 25, :battLow => 11 },
+        // 13. Clean Turquoise (tło: clean)
+        13 => { :bg => 5, :sobrietyColor => 56, :textColor => 65, :battFull => 56, :battMid => 65, :battLow => 2 },
         
         // 14. Banana Yellow (tło: gold)
         14 => { :bg => 6, :sobrietyColor => 35, :textColor => 1, :battFull => 29, :battMid => 25, :battLow => 11 },
         
-        // 15. Turquoise (tło: supergreen)
+        // 15. Green Turquoise (tło: supergreen)
         15 => { :bg => 7, :sobrietyColor => 58, :textColor => 1, :battFull => 56, :battMid => 25, :battLow => 11 },
         
         // ok // 16. Rose Blueberry (tło: white)
         16 => { :bg => 8, :sobrietyColor => 70, :textColor => 80, :battFull => 70, :battMid => 80, :battLow => 2 },
         
-        // 17. Black Pink (tło: black)
+        // ok // 17. Black Pink (tło: black)
         17 => { :bg => 1, :sobrietyColor => 94, :textColor => 88, :battFull => 85, :battMid => 25, :battLow => 11 },
         
-        // 18. Chocolate (tło: blue)
-        18 => { :bg => 2, :sobrietyColor => 30, :textColor => 1, :battFull => 104, :battMid => 25, :battLow => 11 },
+        // 18. Blue Blue Jeans  (tło: blue)
+        18 => { :bg => 2, :sobrietyColor => 74, :textColor => 79, :battFull => 70, :battMid => 73, :battLow => 1 },
         
-        // 19. Sky Blue (tło: clean)
-        19 => { :bg => 5, :sobrietyColor => 75, :textColor => 2, :battFull => 66, :battMid => 25, :battLow => 11 },
+        // 19. Clean Olive  (tło: clean)
+        19 => { :bg => 5, :sobrietyColor => 45, :textColor => 52, :battFull => 51, :battMid => 52, :battLow => 2 },
         
         // ok // 20. Rose Grape (tło: white)
         20 => { :bg => 8, :sobrietyColor => 82, :textColor => 7, :battFull => 82, :battMid => 86, :battLow => 88 }
